@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_login"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login Account"
+            android:textSize="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="20dp"/>
+        <Spinner
+            android:id="@+id/lang_spinner"
+            android:entries="@array/login_langs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"/>
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_login"
+            android:textColorHint="@color/input_login_hint" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInputLayout2"
+            android:layout_marginLeft="2dp"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/white"
+                android:drawableLeft="@android:drawable/ic_lock_lock"
+                android:drawablePadding="10dp"
+                android:paddingLeft="35dp"
+                android:gravity="top"
+                android:padding="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingTop="5dp"
+                android:textColor="@color/input_login"
+                android:textColorHint="@color/input_login_hint"
+                android:singleLine="true">
+            </EditText>
+        </android.support.design.widget.TextInputLayout>
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@color/primary"
+            android:text="Login"
+            android:textColor="@android:color/white" />
+
+        <!-- Link to Login Screen -->
+
+
+        <Button
+            android:id="@+id/registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@color/primary"
+            android:text="Register"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/forgotpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@null"
+            android:text="Forgoten your password !"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+    </LinearLayout>
+</LinearLayout>
